@@ -1,26 +1,35 @@
-#include "Stack.h"
+#include "Queue.h"
 #include <iostream>
+#include <list>
 
-SQueue::SQueue(int initialSize) {
+Queue::Queue(int initialSize) {
 //constructor
+
+    std::list<int>* theQueue = new std::list<int>(initialSize);
 }
 
-SQueue::~SQueue() {
+Queue::~Queue() {
 //destructor
+
+    delete theQueue;
 }
 
-void SQueue::enqueue(int value) {
+void Queue::enqueue(int value) {
 //add to the back of the queue
+    theQueue->push_back(value);
 }
 
-int SQueue::dequeue() {
+int Queue::dequeue() {
 //remove from the front of the queue
+    return theQueue->pop_front();
 }
 
-int SQueue::size() {
+int Queue::size() {
 //return the current count of members
+    return theQueue->size();
 }
 
-bool SQueue::isEmpty() {
+bool Queue::isEmpty() {
 //return true if queue has zero members
+    return theQueue->empty();
 }
