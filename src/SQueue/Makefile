@@ -2,11 +2,11 @@ BUILD = ../../build/SQueue
 CPP = g++
 CPPFLAGS = -Wall -Wextra
 
-main: stack_tester.cpp Stack.o
-	$(CPP) $(CPPFLAGS) -o $(BUILD)/main stack_tester.cpp Stack.o
+main: queue_tester.cpp Queue.o
+	$(CPP) $(CPPFLAGS) -o $(BUILD)/main queue_tester.cpp Queue.o
 
-Stack.o: Stack.h Stack.cpp
-	$(CPP) $(CPPFLAGS) -c Stack.cpp
+Queue.o: Queue.h Queue.cpp
+	$(CPP) $(CPPFLAGS) -c Queue.cpp
 
 clean:
 	rm -f *.o
