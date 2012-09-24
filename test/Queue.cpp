@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "../src/Queue.h"
+#include "../src/SQueue/Queue.h"
 
 TEST(QueueTest, EnqueueDequeue) {
     Queue* q = new Queue();
@@ -21,7 +21,7 @@ TEST(QueueTest, Size) {
 
 TEST(QueueTest, Resize) {
     Queue* q = new Queue();
-    for (int i = 0; i <= 24; i++) {
+    for (int i = 0; i < 24; i++) {
         q->enqueue(i);
     }
     EXPECT_EQ(24, q->size());
