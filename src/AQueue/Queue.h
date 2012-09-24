@@ -3,13 +3,17 @@
 
 class Queue {
  private:
-  std::list<int> theQueue;
+  int* theQueue;
   int front;
   int back;
+  int memberCount;
+  int arraySize;
+  int initialSize;
+  void resizeArray(int newSize);
   
 
  public:
-  Queue(int initialSize = 10);
+  Queue();
   ~Queue(); //destructor
   void enqueue(int value);
   int dequeue();
