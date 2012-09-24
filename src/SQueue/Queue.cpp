@@ -1,16 +1,15 @@
 #include "Queue.h"
 #include <iostream>
 #include <list>
+#include <assert.h>
 
-Queue::Queue(int initialSize) {
+Queue::Queue() {
 //constructor
-
-    std::list<int>* theQueue = new std::list<int>(initialSize);
+    theQueue = new std::list<int>();
 }
 
 Queue::~Queue() {
 //destructor
-
     delete theQueue;
 }
 
@@ -21,7 +20,10 @@ void Queue::enqueue(int value) {
 
 int Queue::dequeue() {
 //remove from the front of the queue
-    return theQueue->pop_front();
+    assert(!isEmpty());
+    int frontValue = theQueue->front();
+    theQueue->pop_front();
+    return frontValue;
 }
 
 int Queue::size() {
