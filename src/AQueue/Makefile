@@ -1,4 +1,4 @@
-BUILD = ../../build/SQueue
+BUILD = ../../build/AQueue
 CPP = g++
 CPPFLAGS = -Wall -Wextra
 
