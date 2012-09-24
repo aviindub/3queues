@@ -8,7 +8,7 @@ class Queue {
   std::list<int>* theQueue;  
 
  public:
-  Queue(int initialSize = 10);
+  Queue();
   ~Queue(); //destructor
   void enqueue(int value);
   int dequeue();
