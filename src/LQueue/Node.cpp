@@ -18,3 +18,7 @@ Node::setNext(Node* nextNode) {
 //set pointer to new node
     next = nextNode;
 }
+
+Node::getValue() {
+    return value;
+}

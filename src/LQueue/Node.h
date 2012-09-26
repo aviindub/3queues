@@ -12,6 +12,7 @@ class Node {
   //~Node();
   void setNext(Node* nextNode);
   Node* getNext();
+  int getValue();
 };
 
 
