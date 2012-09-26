@@ -1,10 +1,9 @@
 #include "gtest/gtest.h"
-#include "../src/SQueue/Queue.h"
+#include "../src/AQueue/Queue.h"
 
 TEST(QueueTest, EnqueueDequeue) {
     Queue* q = new Queue();
     q->enqueue(6);
-
     EXPECT_EQ(6, q->dequeue());
     delete q;
 }
