@@ -1,20 +1,20 @@
 BUILD = ./build
 TEST = ./test
+TIME = ./time
 LIB = ./lib
 SRC = ./src
 
 CPP = g++
 CPPFLAGS = -Wall -Wextra
 
-all: $(BUILD)/main $(TEST)/queue_test
+all: unit_tests time_tests
 
-$(BUILD)/main: $(SRC)/Queue.cpp $(SRC)/Queue.o
-	cd $(SRC); $(MAKE)
+unit_tests: 
+	cd $(TEST); $(MAKE) all
 
-$(TEST)/queue_test: $(TEST)/Queue.cpp $(SRC)/Queue.o
-	cd $(TEST); $(MAKE)
+time_tests:
+	cd $(TIME); $(MAKE) all
 
 clean:
-	cd $(SRC); $(MAKE) clean
 	cd $(TEST); $(MAKE) clean
-
+	cd $(TIME); $(MAKE) clean
