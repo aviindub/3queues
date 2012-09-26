@@ -45,7 +45,7 @@ int Queue::size() {
 
 bool Queue::isEmpty() {
 //return true if queue has zero members
-    if (memberCount = 0) {
+    if (memberCount == 0) {
         return true;
     } else {
         return false;
