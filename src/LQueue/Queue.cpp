@@ -23,6 +23,9 @@ void Queue::enqueue(int value) {
     if (back != 0) {
         back->setNext(newNode);
     }
+    if (front == 0) {
+        front = newNode;
+    }
     back = newNode;
     memberCount++;
 }
