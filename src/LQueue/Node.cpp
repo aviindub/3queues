@@ -3,22 +3,23 @@
 Node::Node(int theValue) {
 //constructor
     value = theValue;
+    next = 0;
 }
 
 //Node::~Node() {
 //destructor
 //}
 
-Node::getNext() {
+Node* Node::getNext() {
 //return pointer to next node
     return next;
 }
 
-Node::setNext(Node* nextNode) {
+void Node::setNext(Node* nextNode) {
 //set pointer to new node
     next = nextNode;
 }
 
-Node::getValue() {
+int Node::getValue() {
     return value;
 }

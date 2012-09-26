@@ -1,15 +1,16 @@
 #ifndef __QUEUE_H__
 #define __QUEUE_H__
+#include "Node.h"
 
 class Queue {
  private:
-  std::list<int> theQueue;
-  int front;
-  int back;
+  Node* front;
+  Node* back;
+  int memberCount;
   
 
  public:
-  Queue(int initialSize = 10);
+  Queue();
   ~Queue(); //destructor
   void enqueue(int value);
   int dequeue();
