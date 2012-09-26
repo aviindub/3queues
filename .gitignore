@@ -1,4 +1,5 @@
 *.o
 *.a
 main
-queue_tester
+*queue_tester
+*queue_test
